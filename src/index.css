@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--accent: theme(colors.blue.500);
+	--text: theme(colors.zinc.900);
+	--bg: theme(colors.zinc.100);
+	--bg-hover: theme(colors.zinc.300);
+	--warning: theme(colors.yellow.400);
+	--error: theme(colors.red.500);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--accent: theme(colors.blue.500);
+		--text: theme(colors.zinc.100);
+		--bg: theme(colors.zinc.900);
+		--bg-hover: theme(colors.zinc.800);
+		--warning: theme(colors.yellow.400);
+		--error: theme(colors.red.500);
+	}
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	padding: 8px;
+
+	background-color: var(--bg);
+	color: var(--text);
+	accent-color: var(--accent);
+
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow: hidden;
+}
+
+#root {
+	padding: 8px;
+	height: 100%;
+	width: 100%;
+	border-radius: 8px;
+	outline: 1px solid theme(colors.zinc.200);
+	box-shadow:
+		theme(colors.zinc.800) 0px 0px 1px,
+		theme(colors.zinc.700) 0px 2px 4px;
+}
+
+button {
+	border-radius: 4px;
+	outline: 1px solid theme(colors.zinc.200/50%);
+	background-color: var(--bg);
+	color: var(--text);
+
+	font-size: 1rem;
+	line-height: 1.5rem;
+	padding: 0.25rem 0.5rem;
+
+	cursor: pointer;
+
+	&:hover {
+		background-color: var(--bg-hover);
+	}
+}
