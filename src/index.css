@@ -55,8 +55,6 @@ body {
 button {
 	border-radius: 4px;
 	outline: 1px solid theme(colors.zinc.200/50%);
-	background-color: var(--bg);
-	color: var(--text);
 
 	font-size: 1rem;
 	line-height: 1.5rem;
@@ -64,7 +62,5 @@ button {
 
 	cursor: pointer;
 
-	&:hover {
-		background-color: var(--bg-hover);
-	}
+	background-color: var(--bg);
 }
